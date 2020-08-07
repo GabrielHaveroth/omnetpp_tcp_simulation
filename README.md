@@ -1,7 +1,7 @@
 # omnetpp_tcp_simulation
 
 
-Esta simulação visa apresentar a visualização do mecanismo do **controle de fluxo** do TCP, o uso da escala da **janela de recepção** (RFC 1323) e a **equidade** de utilização de banda presente no protocolo e foi elaborada durante a realização da matéria EELT7002 - Rede de Comunicação de Dados - 2020.01 da Pós graduação em Engenharia Elétrica da Universidade Federal do Paraná. 
+Esta simulação visa apresentar a visualização do mecanismo do **controle de fluxo** do TCP, o uso da escala da **janela de recepção** (RFC 1323) e a **equidade** de utilização de banda presente no protocolo. Trabalho elaborado durante a realização da matéria EELT7002 - Rede de Comunicação de Dados - 2020.01 da Pós graduação em Engenharia Elétrica da Universidade Federal do Paraná. 
 
 O arquivo *network.ned* apresenta duas topologias de rede que são utilizadas na execução da simulação pelo Omnet++. Sendo estas:
 
