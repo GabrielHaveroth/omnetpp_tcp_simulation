@@ -3,7 +3,6 @@
 
 Esta simulação visa apresentar a visualização do mecânismo do **controle de fluxo** do TCP, o uso da escala da **janela de recepção** e a **equidade** de utização de banda presente no protocolo e foi elaborada durante a realização da materia EELT7002 - Rede de Comunicação de Dados - 2020.01 da Pós graduação em Engenharia Elétrica da Universidade Federal do Paraná. 
 
-
 O arquivo *network.ned* apresenta duas topologias de rede que são utilizadas na execução da simulação pelo Omnet++. Sendo estas:
 
 * *Network_two_clients*: topologia possui 3 roteadores e 2 elementos do tipo StandardHost como clientes e 1 como servidor. A rede apresenta dois canais de comunicação, o canal C1 de 1Gbps conecta os 2 roteadores centrais através da interface PPP e o C2 de menor velocidade (100Mbps) conecta os clientes aos respectivos nós na extremidade da rede. Esta topologia é utilizada na analise do gráfica do mecânismo de **controle de congestionamento** e da **equidade**.
@@ -13,10 +12,10 @@ Utilizando as redes acima, desenvolvou-se os seguintes cenários de simulação:
 
 * *Config WS_disabled*: Cenário utilizado para a analisar graficamente o mecânismo do **controle de congestinamento** através da *Network_two_clients*, o Omnet++ possui a variável de saída denomenada *vector:cwnd*. Os valores do vetor cwnd podem ser exportados para o formato de .csv e analizadodados através do script tpc_cwnd_plot_omnetpp.py.
 * *Config WS_enabled*: Mesma configuração de rede utilizada em *Config WS_disabled*, porém com o *tcp.windowScalingSupport* habilitado.
-* *WS_disabled_one_client*: Utilizado para analizar a questão detalhada em [TCP window scale option](https://en.wikipedia.org/wiki/TCP_window_scale_option#:~:text=The%20TCP%20window%20scale%20option,long%20fat%20networks%20(LFNs).).
+* *Config WS_enabled_one_client*: Através da *Network_one_client*, é utilizado para analizar a questão detalhada em [TCP window scale option](https://en.wikipedia.org/wiki/TCP_window_scale_option#:~:text=The%20TCP%20window%20scale%20option,long%20fat%20networks%20(LFNs).). Deve-se observar neste caso um ganho na utilização da capacidade do canal ao habilitar-se o *tcp.windowScalingSupport*, aumentando-se 100 vezes o tamanho da janela de recepção.
+* *Config WS_disabled_one_client*: Oposto ao cenário *Config WS_enabled_one_client*, deve-se observar o pior desempenho na utilização do Cana C2.
+* *Config two_clients_three_conections_fairness*: Adicionou-se uma conexão TCP ao *other_client* para observa-se a equidade disponibilizada pelo controle de fluxo do TCP. Extendeu-se o cenário *WS_enabled*. 
+* *Config two_clients_four_conections_fairness*: Adicionou-se duas conexões TCP ao *other_client* para observa-se a equidade apresentada pelo equidade disponibilizada pelo controle de fluxo TCP. Extendeu-se o cenário *WS_enabled*. 
 
-
-* *Config two_clients_four_conections_fairness*: 
-* *Config two_clients_four_conections_fairness*:
 
 
