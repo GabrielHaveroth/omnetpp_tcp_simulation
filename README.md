@@ -11,10 +11,11 @@ O arquivo *network.ned* apresenta duas topologias de rede que são utilizadas na
 
 Utilizando as redes acima, desenvolvou-se os seguintes cenários de simulação:
 
-* *Config WS_disabled*: Esse cenário é utilizado para a analisar graficamente o mecânismo do **controle de congestinamento** através da *Network_two_clients*, o Omnet++ possui a variável de saída denomenada *vector:cwnd*. Os valores do vetor cwnd podem ser exportados para o formato de .csv e analizadodados através do script tpc_cwnd_plot_omnetpp.py.
+* *Config WS_disabled*: Cenário utilizado para a analisar graficamente o mecânismo do **controle de congestinamento** através da *Network_two_clients*, o Omnet++ possui a variável de saída denomenada *vector:cwnd*. Os valores do vetor cwnd podem ser exportados para o formato de .csv e analizadodados através do script tpc_cwnd_plot_omnetpp.py.
 * *Config WS_enabled*: Mesma configuração de rede utilizada em *Config WS_disabled*, porém com o *tcp.windowScalingSupport* habilitado.
-* 
-* *Config two_clients_four_conections_fairness*:
+* *WS_disabled_one_client*: Utilizado para analizar a questão detalhada em [*TCP window scale option
+*] (https://en.wikipedia.org/wiki/TCP_window_scale_option#:~:text=The%20TCP%20window%20scale%20option,long%20fat%20networks%20(LFNs)).
+* *Config two_clients_four_conections_fairness*: 
 * *Config two_clients_four_conections_fairness*:
 
 
